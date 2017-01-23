@@ -1,0 +1,25 @@
+<h2>Listing Bills</h2>
+
+<a href="/bills/new">Create a new</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% bills.forEach((bill, key) => { %>
+            <tr>
+                <td> <%= bill.name %></td>
+                <td> <%= bill.value %></td>
+                <td> <%= bill.category.name %></td>
+                <td> <a href="/bills/destroy/<%= bill.id %>">Delete</a></td>
+                <td> <a href="/bills/edit/<%= bill.id %>">Edit</a></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

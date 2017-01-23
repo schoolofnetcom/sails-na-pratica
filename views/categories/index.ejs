@@ -1,0 +1,19 @@
+<h2>Listing Categories</h2>
+<a href="/categories/new">Create a new</a>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% categories.forEach((category, key) => { %>
+            <tr>
+                <td> <%= category.name %></td>
+                <td> <a href="/categories/destroy/<%= category.id %>">Delete</a></td>
+                <td> <a href="/categories/edit/<%= category.id %>">Edit</a></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

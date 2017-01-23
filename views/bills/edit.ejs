@@ -1,0 +1,15 @@
+<h2>Edit new bill</h2>
+<form action="/bills/update/<%= bill.id %>" method="POST">
+    <input type="text" name="name" placeholder="Enter your bills name" value="<%= bill.name %>">
+    <input type="number" name="value" placeholder="Enter your value" value="<%= bill.value %>">
+    <select name="category" id="">
+        <% categories.forEach((category, key) => { %>
+            <% if (category.id == bill.category.id) { %>
+                <option value="<%= bill.category.id %>" selected><%= bill.category.name %></option>
+            <% } else { %>
+                <option value="<%= category.id %>"><%= category.name %></option>
+            <% } %>
+        <% }) %>
+    </select>
+    <button type="submit">Edit</button>
+</form>

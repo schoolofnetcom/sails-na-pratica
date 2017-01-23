@@ -1,0 +1,9 @@
+<% if (session.authenticated) { %>
+  YOU ARE LOGED IN
+  <form action="/logout" method="POST">
+    <button type="submit">Logout</button>
+  </form>
+<% } else { %>
+  YOU ARE NOT LOGED IN
+<% } %>
+

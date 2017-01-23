@@ -1,0 +1,7 @@
+<h2><%= i18n('Signin') %></h2>
+<h2><%= i18n('Test') %></h2>
+<form action="/auth/local?next=/" method="POST">
+    <input type="text" name="identifier" placeholder="Enter your email">
+    <input type="password" name="password" placeholder="Enter your password">
+    <button type="submit">Login</button>
+</form>

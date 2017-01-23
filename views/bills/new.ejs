@@ -1,0 +1,11 @@
+<h2>Create new bill</h2>
+<form action="/bills" method="POST">
+    <input type="text" name="name" placeholder="Enter your bills name">
+    <input type="number" name="value" placeholder="Enter your value">
+    <select name="category" id="">
+        <% categories.forEach((category, key) => { %>
+            <option value="<%= category.id %>"><%= category.name %></option>
+        <% }) %>
+    </select>
+    <button type="submit">Create</button>
+</form>

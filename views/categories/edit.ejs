@@ -1,0 +1,5 @@
+<h2>Edit new category</h2>
+<form action="/categories/update/<%= category.id %>" method="POST">
+    <input type="text" name="name" placeholder="Enter your category name" value="<%= category.name %>">
+    <button type="submit">Edit</button>
+</form>
